@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sean Ke | Cornell Dyson Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #B31B1B; /* Cornell Red */
+            --secondary: #222;
+            --text: #333;
+            --light: #f4f4f4;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--white);
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--secondary);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 10% 60px;
+            min-height: 80vh;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 4px solid var(--primary);
+            display: inline-block;
+        }
+
+        /* About & Education */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Skills & Classes Tags */
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background: var(--primary);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .tag.blue { background: #004b8d; } /* For Computer Science/Technical */
+        .tag.gray { background: #555; }
+
+        /* Interests */
+        .interests-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .interests-list li {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        /* Contact Section */
+        .contact {
+            text-align: center;
+            background: var(--secondary);
+            color: white;
+        }
+
+        .contact h2 { border-color: var(--white); }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2.5rem; }
+            section { padding: 80px 5% 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo">SEAN KE</a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#interests">Interests</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Sean Ke</h1>
+        <p>Applied Economics and Management @ Cornell University <br> 
+           International Transfer | Finance Enthusiast | Computer Science Minor</p>
+        <a href="#contact" class="btn">Get In Touch</a>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="card">
+            <p>I am a Junior transfer student at the <strong>Charles H. Dyson School of Applied Economics and Management</strong> at Cornell University[cite: 4, 5]. With a background spanning from Vancouver to Ithaca, I bridge the gap between finance and technology. I am passionate about stock trading, having achieved an 18.63% realized return over 5 months of active US equity management[cite: 35], and I enjoy leading initiatives that blend community building with strategic operations.</p>
+        </div>
+    </section>
+
+    <section id="education" style="background-color: #fcfcfc;">
+        <h2>Education</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>Cornell University</h3>
+                <p><strong>B.S. in Applied Economics and Management</strong> [cite: 6]</p>
+                <p>Concentration: Finance | Minor: Computer Science [cite: 7]</p>
+                <p>GPA: 4.1 | Aug 2024 - May 2027 [cite: 9, 10]</p>
+            </div>
+            <div class="card">
+                <h3>Langara College</h3>
+                <p><strong>Diploma of Arts & Science, Commerce</strong> [cite: 13]</p>
+                <p>Dean's Honor Roll (2023) [cite: 14]</p>
+                <p>GPA: 4.18 | Sep 2023 - Jun 2024 [cite: 16, 17]</p>
+            </div>
+        </div>
+
+        <h3 style="margin-top: 30px; margin-bottom: 15px;">Relevant Coursework</h3>
+        <div class="tag-container">
+            <span class="tag">Financial Accounting</span>
+            <span class="tag">Spreadsheet Modeling</span>
+            <span class="tag">Managerial Economics</span>
+            <span class="tag">Discrete Mathematics</span>
+            <span class="tag">Calculus II</span>
+            <span class="tag">First Order Logic</span>
+            <span class="tag">Inferential Statistics</span>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills & Languages</h2>
+        <div class="grid-container">
+            <div>
+                <h3>Technical & Professional</h3>
+                <div class="tag-container" style="margin-top: 15px;">
+                    <span class="tag blue">Financial Modeling</span>
+                    <span class="tag blue">Excel (Advanced)</span>
+                    <span class="tag blue">Python</span>
+                    <span class="tag blue">RStudio</span>
+                    <span class="tag blue">Powerpoint</span>
+                    <span class="tag blue">Adobe Photoshop</span>
+                </div>
+            </div>
+            <div>
+                <h3>Languages</h3>
+                <div class="tag-container" style="margin-top: 15px;">
+                    <span class="tag gray">Indonesian (Fluent)</span>
+                    <span class="tag gray">English (Fluent)</span>
+                    <span class="tag gray">French (Intermediate)</span>
+                    <span class="tag gray">Japanese (Intermediate)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="interests" style="background-color: #fcfcfc;">
+        <h2>Interests</h2>
+        <ul class="interests-list">
+            <li>Jazz Piano</li>
+            <li>Spoken Word Poetry</li>
+            <li>Drawing</li>
+            <li>Animation</li>
+            <li>Cooking</li>
+            <li>Personal Stock Trading</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Connect With Me</h2>
+        <p>I'm always open to discussing finance, tech, or jazz piano!</p>
+        <p style="margin-top: 10px;">Ithaca, NY [cite: 8]</p>
+        <p>Email: <a href="mailto:sk3387@cornell.edu" style="color: white;">sk3387@cornell.edu</a> [cite: 2]</p>
+        <div style="margin-top: 20px;">
+            <a href="https://www.linkedin.com/in/sean-ke-3a2404263-" target="_blank" class="btn">LinkedIn Profile</a>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 20px; font-size: 0.8rem; color: #888;">
+        &copy; <script>document.write(new Date().getFullYear())</script> Sean Ke. Built with HTML/CSS/JS.
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple Fade-in effect on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = "0";
+            section.style.transform = "translateY(20px)";
+            section.style.transition = "all 0.6s ease-out";
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
